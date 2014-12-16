@@ -1,0 +1,28 @@
+Para Carros y Motocicletas
+
+La dirección del Web Service es:
+	webservice-devsas.rhcloud.com/automobiles
+	webservice-devsas.rhcloud.com/motorcycles
+
+	Tipos de Peticiones
+
+	POST: Para generar el parqueadero para el día, solo se debe realizar una vez por día,
+		este regresa un id de tipo String, el cuál es necesario almacenar para actualizar 
+		los datos en el servidor.
+
+	PUT: Usado para actualizar la cantidad de sitios de parqueo ocupados.
+		Para hacer uso de este es necesario indicar la cantidad de autos que ingresan al parqueadero.
+		El nombre de la variable del parámetro deben ser iguales a los descritos en el formato abajo.
+
+	GET: Regresa la información actual del parqueadero
+
+Todos los métodos usan este formato.
+
+{
+	'total': Number,
+	'disponibles': Number,
+	'ocupados': Number,
+	'fecha': Date
+}
+
+
